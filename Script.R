@@ -17,10 +17,10 @@
 ## Load libraries
 source("/Users/u1566746/Documents/Work/Rproject/libsource/mylibrary.R")
 
-# Show packages in mylib, the list of packages set to be loaded
+# Show packages in mylib, the list of packages set to be loaded in mylibrary script
 sort(mylib)
 
-# If microeco package is needed run line 20 to load it. Otherwise do not load it as it is a BIG package.
+# If microeco package is needed run line 24 to load it. Otherwise do not load it as it is a BIG package.
 # library(microeco)
 
 # List the libraries that are loaded
@@ -31,4 +31,4 @@ sort((.packages()))
 read.csv("data.csv")
 
 # Request to import data and store the data as an object, with a name, in R's brain
-dt<-read.csv("data.csv")
+dt <- read.csv("data.csv")
