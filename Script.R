@@ -32,9 +32,10 @@ sort((.packages()))
 # read the CSV file containing the data
 read.csv("data.csv")
 
-# Request to import data and store the data as an object, with a name, in R's brain
+# Request to import data and store the data as an object, with a name, in R's 
+# brain
 dt <- read.csv("data.csv")
 
-
-
+# Put the repository on GitHub (need "usethis" library)
+use_github()
 
