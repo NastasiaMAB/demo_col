@@ -17,11 +17,11 @@
 ## Load libraries
 source("/Users/u1566746/Documents/Work/Rproject/libsource/mylibrary.R")
 
-# Show packages in mylib, the list of packages set to be loaded in mylibrary 
+# Show packages in mylib, the list of packages set to be loaded in the mylibrary 
 # script
 sort(mylib)
 
-# If microeco package is needed run line 24 to load it. Otherwise do not load it
+# If microeco package is needed run line 26 to load it. Otherwise do not load it
 # as it is a BIG package.
 # library(microeco)
 
