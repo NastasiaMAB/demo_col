@@ -36,6 +36,28 @@ read.csv("data.csv")
 # brain
 dt <- read.csv("data.csv")
 
+## Store your git repository on GitHub
 # Put the repository on GitHub (need "usethis" library)
 use_github()
 
+## Make the plot
+
+# Re-order factor "date" by chronological order
+dt$date <- factor(dt$date, levels = c("Nov", "Jan", "Feb", "Mar", "May", "Jun", 
+                                      "Jul"))
+# Make the plot
+plot <- ggplot(dt, aes(x = date, y=so, fill = as.factor(co))) + 
+  geom_tile(color = "white", linewidth = 0.05) + 
+  scale_x_discrete(expand = c(0,0)) + 
+  scale_fill_manual(values=c("#CCCCCC", "#FFC425", "#D11141"), 
+                    name = "soil sample\nCocci-detection") + 
+  theme_classic() + 
+  theme(axis.title=element_blank(), axis.ticks=element_blank(), 
+        axis.line=element_blank(), legend.title = element_text(size = 8), 
+        legend.text = element_text(size = 7), legend.key.size = unit(0.4, "cm"))
+
+# Save the plot
+ggsave("/Users/u1566746/Documents/Work/RProject/demo_col/fig.jpeg", plot)
+
+
+# Don't forget to add the plot in Git index
